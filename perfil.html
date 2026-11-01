@@ -1,0 +1,78 @@
+<!--
+Descricao: Desenvolvimento Web - Elementos Avançados de Formulário
+nome_arquivo: perfil.html
+nome_exercicio: Aula 13 - Elementos Avançados de Formulário
+nome_aluno: Geovana Ramos Pereira
+email_aluno: geovana.pereira8@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - Aula 13</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div class="foto-topo">
+            <img src="avatar.gif" alt="Foto do Perfil">
+        </div>
+
+        <h1>Personalizar Perfil</h1>
+        <p class="subtitulo">Configure suas preferências e informações pessoais.</p>
+
+        <form id="formPerfil" novalidate>
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+            </div>
+            <span class="erro" id="erroNome"></span>
+
+            <div class="campo">
+                <label>Gênero:</label>
+                <div class="opcoes-inline">
+                    <label class="rotulo-opcao"><input type="radio" name="genero" value="Feminino"> Feminino</label>
+                    <label class="rotulo-opcao"><input type="radio" name="genero" value="Masculino"> Masculino</label>
+                    <label class="rotulo-opcao"><input type="radio" name="genero" value="Outro"> Outro</label>
+                </div>
+            </div>
+            <span class="erro" id="erroGenero"></span>
+
+            <div class="campo">
+                <label for="estado">Estado (UF):</label>
+                <select id="estado">
+                    <option value="">Selecione um estado...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PR">Paraná</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <span class="erro" id="erroEstado"></span>
+
+            <div class="campo">
+                <label for="biografia">Biografia / Sobre você:</label>
+                <textarea id="biografia" rows="4" placeholder="Conte um pouco sobre suas preferências..."></textarea>
+            </div>
+            <span class="erro" id="erroBiografia"></span>
+
+            <div class="campo">
+                <label class="rotulo-opcao">
+                    <input type="checkbox" id="termos"> Aceito notificações e concordo com os termos do perfil
+                </label>
+            </div>
+            <span class="erro" id="erroTermos"></span>
+
+            <button type="submit" class="botao-primario">Salvar Perfil</button>
+            <p class="sucesso" id="sucessoPerfil"></p>
+        </form>
+
+        <p class="rodape-link">Deseja sair da conta? <a href="cadastro.html">Sair</a></p>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

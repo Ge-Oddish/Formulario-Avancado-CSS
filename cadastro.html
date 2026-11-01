@@ -1,0 +1,53 @@
+<!--
+Descricao: Desenvolvimento Web - Elementos Avançados de Formulário
+nome_arquivo: cadastro.html
+nome_exercicio: Aula 13 - Elementos Avançados de Formulário
+nome_aluno: Geovana Ramos Pereira
+email_aluno: geovana.pereira8@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Sistema - Aula 13</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div class="foto-topo">
+            <img src="avatar.gif" alt="Foto do Usuário">
+        </div>
+
+        <h1>Acesso ao Sistema</h1>
+        <p class="subtitulo">Entre com seu e-mail e sua senha de acesso.</p>
+
+        <form id="formAcesso" novalidate>
+            <div class="campo">
+                <label for="emailAcesso">E-mail:</label>
+                <input type="email" id="emailAcesso" placeholder="seuemail@gmail.com">
+            </div>
+            <span class="erro" id="erroEmailAcesso"></span>
+
+            <div class="campo">
+                <label for="senhaAcesso">Senha:</label>
+                <div class="campo-senha">
+                    <input type="password" id="senhaAcesso" placeholder="Digite sua senha">
+                    <button type="button" id="verSenha">Mostrar</button>
+                </div>
+            </div>
+            <span class="erro" id="erroSenhaAcesso"></span>
+
+            <p class="link-acao"><a href="#" id="linkEsqueci">Esqueci minha senha</a></p>
+
+            <button type="submit" class="botao-primario">Entrar</button>
+            <p class="sucesso" id="sucessoAcesso"></p>
+        </form>
+
+        <p class="rodape-link">Ainda não tem conta? <a href="#" id="linkCadastro">Cadastre-se</a></p>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

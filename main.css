@@ -1,0 +1,280 @@
+/*
+Descricao: Desenvolvimento Web - Elementos Avançados de Formulário
+nome_arquivo: main.css
+nome_exercicio: Aula 13 - Elementos Avançados de Formulário
+nome_aluno: Geovana Ramos Pereira
+email_aluno: geovana.pereira8@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #452815;
+    margin: 0;
+    padding: 70px 16px 40px 16px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Xadrez amplo entre Barley Corn e Champagne */
+    background-color: #E8D2B8;
+    background-image: 
+        conic-gradient(#B6885D 90deg, #E8D2B8 90deg 180deg, #B6885D 180deg 270deg, #E8D2B8 270deg);
+    background-size: 96px 96px;
+    background-position: 0 0;
+    animation: deslizarCafe 16s linear infinite;
+}
+
+@keyframes deslizarCafe {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 96px 96px;
+    }
+}
+
+main {
+    position: relative;
+    background-color: #F9F4EE;
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto 20px auto;
+    padding: 24px 28px 32px 28px;
+    border-radius: 20px;
+    border: 2px solid rgba(69, 40, 21, 0.15);
+    box-shadow: 0 16px 36px rgba(69, 40, 21, 0.25);
+}
+
+.foto-topo {
+    width: 120px;
+    height: 120px;
+    margin: -85px auto 16px auto;
+    background-color: #F9F4EE;
+    border-radius: 20px;
+    border: 4px solid #F9F4EE;
+    box-shadow: 0 8px 20px rgba(69, 40, 21, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-topo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    color: #452815;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #73411F;
+    margin-bottom: 22px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+    width: 100%;
+}
+
+label {
+    font-weight: 600;
+    color: #452815;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #E0C4A0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    color: #452815;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select option {
+    background-color: #FFFFFF;
+    color: #452815;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #73411F;
+    box-shadow: 0 0 0 1px #73411F;
+}
+
+.invalido {
+    border-color: #BA1200 !important;
+    background-color: #FFF5F5 !important;
+}
+
+.opcoes-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.rotulo-opcao {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 13px;
+    color: #452815;
+}
+
+.campo-senha {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+#verSenha {
+    background-color: #E0C4A0;
+    color: #452815;
+    border: none;
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#verSenha:hover {
+    background-color: #B6885D;
+}
+
+.erro {
+    display: block;
+    color: #BA1200;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 14px;
+}
+
+.link-acao {
+    text-align: right;
+    margin: 8px 0 16px 0;
+    font-size: 12px;
+}
+
+a {
+    color: #73411F;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #452815;
+    text-decoration: underline;
+}
+
+.botao-primario {
+    width: 100%;
+    padding: 13px;
+    background-color: #452815;
+    color: #E8D2B8;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 14px;
+    box-shadow: 0 4px 12px rgba(69, 40, 21, 0.3);
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.botao-primario:hover {
+    background-color: #2F1B0E;
+    transform: translateY(-1px);
+}
+
+.sucesso {
+    text-align: center;
+    color: #73411F;
+    font-weight: 700;
+    margin-top: 14px;
+    font-size: 13px;
+}
+
+.rodape-link {
+    text-align: center;
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(69, 40, 21, 0.15);
+    font-size: 13px;
+    color: #73411F;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 50px 12px 24px 12px;
+        align-items: flex-start;
+        background-size: 72px 72px;
+    }
+
+    main {
+        padding: 20px 16px 24px 16px;
+        margin-top: 35px;
+        border-radius: 16px;
+    }
+
+    .foto-topo {
+        width: 100px;
+        height: 100px;
+        margin: -70px auto 14px auto;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .opcoes-inline {
+        gap: 8px 12px;
+    }
+}
